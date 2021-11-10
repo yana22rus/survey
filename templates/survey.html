@@ -6,10 +6,12 @@
 </head>
 <body>
 
+
 <form method="POST" id="test">
 <input type="button" value="Добавить вопрос" onclick="add()">
 <input type="button" value="Удалить вопрос" onclick="del()">
-<input type="submit" value="Оправить форму">
+<input type="submit" onclick="buttonClick()" type="submit">
+<input type="text" name="input" value="???" id="input">
 </form>
 
 <script>
@@ -35,6 +37,12 @@ function del(){
 	count = count -1
 	let del = document.getElementById(String(count));
 	del.parentNode.removeChild(del);
+
+}
+
+function buttonClick() {
+	var input = document.getElementById('input');
+	input.value = '!!!';
 
 }
 
